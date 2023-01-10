@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.css';
 import Display from './components/Display';
-import Control from './components/Control';
+import { AppProvider } from './components/store/context';
 
 function App() {
   return (
     <div className="App">
-      <h1>Counter</h1>
-      <Display />
-      <Control />
+      <AppProvider>
+        <Display />
+
+      </AppProvider>
     </div>
   );
 }
